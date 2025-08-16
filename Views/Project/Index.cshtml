@@ -1,0 +1,39 @@
+﻿@model List<Project>
+@{
+    ViewData["Title"] = "My Projects";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+@{
+    int count = 0;
+}
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>#</th>
+        <th>Project Image</th>
+        <th>Project Name</th>
+        <th>Description</th>
+        <th>Github Url</th>
+        <th>Category Name</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach(var item in Model)
+    {
+        count++;
+        <tr>
+            <th>@count</th>
+            <td><img src="@item.ImageUrl" style="height:75px; width:75px;"/></td>
+            <td>@item.ProjectName</td>
+            <td>@item.Description</td>
+            <td><a href="@item.GithubUrl">Github Url</a></td>
+            <td>@item.Category.CategoryName</td>  
+            <td>
+                <a href="/Project/DeleteProject/@item.ProjectId" class="btn btn-outline-danger">Sil</a>
+                <a href="/Project/UpdateProject/@item.ProjectId" class="btn btn-outline-info">Güncelle</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<a href="/Project/CreateProject/" class="btn btn-outline-primary">Yeni Proje Oluştur</a>

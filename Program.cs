@@ -1,7 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using Portfolio.Web.Context;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<PortfolioContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+//IOC Container
+//builder.Services.AddScoped<PortfolioContext>();
 
 var app = builder.Build();
 

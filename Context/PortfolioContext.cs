@@ -5,9 +5,8 @@ namespace Portfolio.Web.Context
 {
     public class PortfolioContext : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public PortfolioContext(DbContextOptions<PortfolioContext> options) : base(options)
         {
-            optionsBuilder.UseSqlServer("server= (localdb)\\MSSQLLOCALDB; database= MyAcademyPortfolioDb; integrated security = true; trustServerCertificate = true");
         }
 
         //pluralize, singularize
@@ -17,5 +16,7 @@ namespace Portfolio.Web.Context
         public DbSet<Education> Educations  { get; set; }
         public DbSet<Experience> Experiences  { get; set; }
         public DbSet<Project> Projects  { get; set; }
+
+        //CRUD Create Read Update Delete
     }
 }
