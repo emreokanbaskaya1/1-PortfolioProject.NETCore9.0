@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Statistics";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-6 col-xl-3">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="mb-2 f-w-400 text-muted">Number of Projects </h6>
+                <h4 class="mb-3"> @ViewBag.projectCount</h4>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="mb-2 f-w-400 text-muted">Total Users</h6>
+                <h4 class="mb-3"> @ViewBag.skillsAverage </h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="mb-2 f-w-400 text-muted">
+                    Number of Unread Messages
+                </h6>
+                <h4 class="mb-3">
+                    @ViewBag.unreadMessageCount
+                    
+                </h4>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="mb-2 f-w-400 text-muted">Last Message Sender</h6>
+                <h4 class="mb-3">
+                    @ViewBag.lastMessageOwner
+                </h4>
+               
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
