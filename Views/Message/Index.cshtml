@@ -1,0 +1,120 @@
+﻿@model List<UserMessage>
+@{
+    ViewData["Title"] = "Messages";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<!-- Mesaj Tablosu -->
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>#</th>
+        <th>Sender Name</th>
+        <th>Sender Mail</th>
+        <th>Subject</th>
+        <th>Actions</th>
+    </tr>
+
+    @{
+        int count = (ViewBag.CurrentPage - 1) * ViewBag.PageSize;
+    }
+
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <th>@count</th>
+            <td>@item.Name</td>
+            <td>@item.Email</td>
+            <td>@item.Subject</td>
+            <td>
+                @if (item.IsRead)
+                {
+                    <button onclick="showMessage(@item.UserMessageId)" class="btn btn-secondary btn-sm">
+                        <i class="fas fa-eye"></i> Read
+                    </button>
+                }
+                else
+                {
+                    <button onclick="showMessage(@item.UserMessageId)" class="btn btn-primary btn-sm">
+                        <i class="fas fa-eye"></i> New
+                    </button>
+                }
+                <a href="/Message/MessageDelete/@item.UserMessageId" class="btn btn-outline-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<!-- Pagination -->
+@if (ViewBag.TotalPages > 1)
+{
+    <nav aria-label="Mesaj sayfaları">
+        <ul class="pagination justify-content-center">
+            <!-- Önceki Sayfa -->
+            @if (ViewBag.CurrentPage > 1)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="?page=@(ViewBag.CurrentPage - 1)">« Previous</a>
+                </li>
+            }
+
+            <!-- Sayfa Numaraları -->
+            @{
+                int startPage = Math.Max(1, ViewBag.CurrentPage - 2);
+                int endPage = Math.Min(ViewBag.TotalPages, ViewBag.CurrentPage + 2);
+            }
+
+            @for (int i = startPage; i <= endPage; i++)
+            {
+                <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                    <a class="page-link" href="?page=@i">@i</a>
+                </li>
+            }
+
+            <!-- Sonraki Sayfa -->
+            @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="?page=@(ViewBag.CurrentPage + 1)">Next »</a>
+                </li>
+            }
+        </ul>
+    </nav>
+}
+
+<!-- Bilgi -->
+<div class="text-center mt-3">
+    <p class="text-muted">
+        Total <strong>@ViewBag.TotalMessages</strong> messages,
+        <strong>@ViewBag.TotalPages</strong> pages
+        (Page @ViewBag.CurrentPage / @ViewBag.TotalPages)
+    </p>
+</div>
+
+
+<!-- Mevcut tablo kodu... -->
+
+<!-- Modal -->
+<div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" id="modalContent">
+            <!-- Partial view buraya yüklenecek -->
+        </div>
+    </div>
+</div>
+
+<!-- Minimal JavaScript -->
+<script>
+function showMessage(id) {
+    $.get('/Message/ShowMessage/' + id, function(data) {
+        $('#modalContent').html(data);
+        $('#messageModal').modal('show');
+        
+        // Sayfayı yenile (buton rengini güncellemek için)
+        setTimeout(function() {
+            location.reload();
+        }, 1000);
+    });
+}
+</script>
+

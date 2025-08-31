@@ -5,48 +5,121 @@
 
 <div class="row">
     <div class="col-md-6 col-xl-3">
-        <div class="card">
+        <div class="card social-widget-card bg-primary">
             <div class="card-body">
-                <h6 class="mb-2 f-w-400 text-muted">Number of Projects </h6>
-                <h4 class="mb-3"> @ViewBag.projectCount</h4>
-
+                <span class="m-t-10">Number of Projects</span>
+                <h3 class="text-white m-0">@ViewBag.projectCount</h3>
+                <i class="fas fa-code"></i>
             </div>
         </div>
     </div>
     <div class="col-md-6 col-xl-3">
-        <div class="card">
+        <div class="card social-widget-card bg-info">
             <div class="card-body">
-                <h6 class="mb-2 f-w-400 text-muted">Total Users</h6>
-                <h4 class="mb-3"> @ViewBag.skillsAverage </h4>
+                <span class="m-t-10">Skills Average (%)</span>
+                <h3 class="text-white m-0">@ViewBag.skillsAverage</h3>
+                <i class="fas fa-chart-line"></i>
             </div>
         </div>
     </div>
     <div class="col-md-6 col-xl-3">
-        <div class="card">
+        <div class="card social-widget-card bg-warning">
             <div class="card-body">
-                <h6 class="mb-2 f-w-400 text-muted">
-                    Number of Unread Messages
-                </h6>
-                <h4 class="mb-3">
-                    @ViewBag.unreadMessageCount
-                    
-                </h4>
-
+                <span class="m-t-10">Unread Messages</span>
+                <h3 class="text-white m-0">@ViewBag.unreadMessageCount</h3>
+                <i class="fas fa-envelope"></i>
             </div>
         </div>
     </div>
     <div class="col-md-6 col-xl-3">
-        <div class="card">
+        <div class="card social-widget-card bg-secondary">
             <div class="card-body">
-                <h6 class="mb-2 f-w-400 text-muted">Last Message Sender</h6>
-                <h4 class="mb-3">
-                    @ViewBag.lastMessageOwner
-                </h4>
-               
+                <span class="m-t-10">Last Message From</span>
+                <h3 class="text-white m-0">@ViewBag.lastMessageOwner</h3>
+                <i class="fas fa-user"></i>
             </div>
         </div>
     </div>
-
-
 </div>
+
+<div class="row">
+    <div class="col-md-6 col-xl-3">
+        <div class="card social-widget-card bg-primary">
+            <div class="card-body">
+                <span class="m-t-10">Years of Experience</span>
+                <h3 class="text-white m-0">@ViewBag.experienceYear</h3>
+                <i class="fas fa-briefcase"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+        <div class="card social-widget-card bg-info">
+            <div class="card-body">
+                <span class="m-t-10">Companies Worked</span>
+                <h3 class="text-white m-0">@ViewBag.companyCount</h3>
+                <i class="fas fa-building"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+        <div class="card social-widget-card bg-warning">
+            <div class="card-body">
+                <span class="m-t-10">Average Reviews</span>
+                <h3 class="text-white m-0">@ViewBag.reviewAverage</h3>
+                <i class="fas fa-star"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+        <div class="card social-widget-card bg-danger">
+            <div class="card-body">
+                <span class="m-t-10">Top Reviewer</span>
+                <h3 class="text-white m-0">@ViewBag.maxReviewOwner</h3>
+                <i class="fas fa-crown"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-3">
+        <div class="card social-widget-card bg-success">
+            <div class="card-body">
+                <span class="m-t-10">Skills Count</span>
+                <h3 class="text-white m-0">@ViewBag.skillsCount</h3>
+                <i class="fas fa-tools"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-xl-3">
+        <div class="card social-widget-card bg-secondary">
+            <div class="card-body">
+                <span class="m-t-10">Education Count</span>
+                <h3 class="text-white m-0">@ViewBag.educationCount</h3>
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="col-md-6 col-xl-3">
+        <div class="card social-widget-card bg-dark">
+            <div class="card-body">
+                <span class="m-t-10">Total Messages</span>
+                <h3 class="text-white m-0">@ViewBag.messageCount</h3>
+                <i class="fas fa-comments"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-xl-3">
+        <div class="card social-widget-card bg-success">
+            <div class="card-body">
+                <span class="m-t-10">Highest Skill (%)</span>
+                <h3 class="text-white m-0">@ViewBag.highestSkillPercentage%</h3>
+                <i class="fas fa-trophy"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 

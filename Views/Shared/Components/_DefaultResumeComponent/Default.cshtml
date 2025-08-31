@@ -1,0 +1,78 @@
+<!-- Resume Section -->
+<section id="resume" class="resume section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <p>My educational background and professional experience</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                
+
+                
+
+@model ResumeViewModel
+                <h3 class="resume-title">Education</h3>
+                @if (Model.Educations != null && Model.Educations.Any())
+                {
+                    @foreach (var education in Model.Educations)
+                    {
+                        <div class="resume-item">
+                            <h4>@education.Department</h4>
+                            <h5>@education.StartYear - @(education.EndYear?.ToString() ?? "Present")</h5>
+                            <p><em>@education.SchoolName</em></p>
+                            @if (!string.IsNullOrEmpty(education.Description))
+                            {
+                                <p>@education.Description</p>
+                            }
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="resume-item">
+                        <h4>No education records found</h4>
+                        <p><em>Please add your education information through the admin panel.</em></p>
+                    </div>
+                }
+
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="resume-title">Professional Experience</h3>
+                @if (Model.Experiences != null && Model.Experiences.Any())
+                {
+                    @foreach (var experience in Model.Experiences)
+                    {
+                        <div class="resume-item">
+                            <h4>@experience.Title</h4>
+                            <h5>@experience.StartYear.@experience.StartMonth - @(experience.EndYear != null ? $"{experience.EndYear}.{experience.EndMonth}" : "Present")</h5>
+                            <p><em>@experience.Company, @experience.City</em></p>
+                            @if (!string.IsNullOrEmpty(experience.Description))
+                            {
+                                <ul>
+                                    <li>@experience.Description</li>
+                                </ul>
+                            }
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="resume-item">
+                        <h4>No experience records found</h4>
+                        <p><em>Please add your work experience through the admin panel.</em></p>
+                    </div>
+                }
+            </div>
+
+        </div>
+
+    </div>
+
+</section><!-- /Resume Section -->

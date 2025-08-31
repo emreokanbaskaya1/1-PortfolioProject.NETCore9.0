@@ -1,0 +1,35 @@
+@model UserMessage
+
+<div class="modal-header">
+    <h5 class="modal-title">Message Detail</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <strong>Sender:</strong>
+            <p class="mb-0">@Model.Name</p>
+        </div>
+        <div class="col-md-6">
+            <strong>E-mail:</strong>
+            <p class="mb-0">@Model.Email</p>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-12">
+            <strong>Subject:</strong>
+            <p class="mb-0">@Model.Subject</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <strong>Message:</strong>
+            <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; margin-top: 10px; min-height: 100px;">
+                @Html.Raw(Model.MessageBody?.Replace("\n", "<br>"))
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+</div>

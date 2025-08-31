@@ -1,0 +1,46 @@
+@model About
+<!-- About Section -->
+<section id="about" class="about section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>Learn more about my background and experience</p>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+            <div class="col-lg-4">
+                <img src="@(Model?.ImageUrl ?? "~/Kelly-1.0.0/assets/img/profile-img.jpg")" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-8 content">
+                <h2>@(Model?.Title ?? "Professional Developer")</h2>
+                <p class="fst-italic py-3">
+                    @(Model?.Description ?? "Passionate about creating innovative solutions and delivering high-quality software.")
+                </p>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>@(Model?.BirthDate?.ToString("dd MMM yyyy") ?? "Not specified")</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>@(Model?.WebSite ?? "Not specified")</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>@(Model?.PhoneNumber ?? "Not specified")</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>@(Model?.City ?? "Not specified")</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>@(Model?.BirthDate != null ? (DateTime.Now.Year - Model.BirthDate.Value.Year).ToString() : "Not specified")</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>@(Model?.Graduation ?? "Not specified")</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>@(Model?.Email ?? "Not specified")</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>@(Model?.IsAvailable == true ? "Available" : "Not Available")</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+</section><!-- /About Section -->

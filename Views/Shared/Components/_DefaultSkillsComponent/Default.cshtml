@@ -1,0 +1,53 @@
+@model List<Portfolio.Web.Entities.Skill>
+
+<!-- Skills Section -->
+<section id="skills" class="skills section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row skills-content skills-animation">
+
+            <div class="col-lg-6">
+                @if (Model != null && Model.Count > 0)
+                {
+                    var firstHalf = Model.Take((Model.Count + 1) / 2).ToList();
+                    foreach (var skill in firstHalf)
+                    {
+                        <div class="progress">
+                            <span class="skill"><span>@skill.Title</span> <i class="val">@skill.Percentage%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="@skill.Percentage" aria-valuemin="0" aria-valuemax="100" style="width: @skill.Percentage%"></div>
+                            </div>
+                        </div>
+                    }
+                }
+               
+            </div>
+
+            <div class="col-lg-6">
+                @if (Model != null && Model.Count > 1)
+                {
+                    var secondHalf = Model.Skip((Model.Count + 1) / 2).ToList();
+                    foreach (var skill in secondHalf)
+                    {
+                        <div class="progress">
+                            <span class="skill"><span>@skill.Title</span> <i class="val">@skill.Percentage%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="@skill.Percentage" aria-valuemin="0" aria-valuemax="100" style="width: @skill.Percentage%"></div>
+                            </div>
+                        </div>
+                    }
+                }
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</section><!-- /Skills Section -->

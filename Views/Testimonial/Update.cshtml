@@ -1,0 +1,55 @@
+@model Testimonial
+@{
+    ViewData["Title"] = "Update Testimonial";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h5>Update Testimonial</h5>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            <input type="hidden" asp-for="TestimonialId" />
+            
+            <div class="form-group mb-3">
+                <label>Name:</label>
+                <input type="text" class="form-control" asp-for="Name" 
+                       placeholder="John Doe" required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label>Title:</label>
+                <input type="text" class="form-control" asp-for="Title" 
+                       placeholder="CEO, Company Name" required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label>Profile Image URL:</label>
+                <input type="url" class="form-control" asp-for="ImageUrl" 
+                       placeholder="https://example.com/profile.jpg" />
+            </div>
+
+            <div class="form-group mb-3">
+                <label>Review (1-5):</label>
+                <select class="form-control" asp-for="Review" required>
+                    <option value="">Select Rating</option>
+                    <option value="1">1 Star</option>
+                    <option value="2">2 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="5">5 Stars</option>
+                </select>
+            </div>
+
+            <div class="form-group mb-3">
+                <label>Comment:</label>
+                <textarea class="form-control" asp-for="Comment" rows="4" 
+                          placeholder="Their testimonial about your work..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Update Testimonial</button>
+            <a href="/Testimonial/Index" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</div>

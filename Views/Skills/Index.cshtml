@@ -1,0 +1,37 @@
+﻿@model List<Skill>
+@{
+    ViewData["Title"] = "Skills";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+
+@{
+    int count = 0;
+}
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Percentage</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <th>@count</th>
+            <td>@item.Title</td>
+            <td>@item.Percentage</td>
+            <td>
+                <a href="/Skills/DeleteSkill/@item.SkillId" class="btn btn-outline-danger">Delete</a>
+                <a href="/Skills/EditSkill/@item.SkillId" class="btn btn-outline-info">Update</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<a href="/Skills/CreateSkill/" class="btn btn-outline-primary">Create New Skill</a>
+
+

@@ -1,0 +1,48 @@
+@model Education
+@{
+    ViewData["Title"] = "Add Education";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h5>Add Education</h5>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            <div class="form-group mb-3">
+                <label>School Name:</label>
+                <input type="text" class="form-control" asp-for="SchoolName" 
+                       placeholder="University Name" required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label>Department:</label>
+                <input type="text" class="form-control" asp-for="Department" 
+                       placeholder="Computer Science" required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label>Start Year:</label>
+                <input type="number" class="form-control" asp-for="StartYear" 
+                       min="1950" max="@DateTime.Now.Year" required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label>End Year:</label>
+                <input type="number" class="form-control" asp-for="EndYear" 
+                       min="1950" max="@(DateTime.Now.Year + 10)" 
+                       placeholder="Leave empty if still studying" />
+            </div>
+
+            <div class="form-group mb-3">
+                <label>Description:</label>
+                <textarea class="form-control" asp-for="Description" rows="3" 
+                          placeholder="Brief description about your education..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Add Education</button>
+            <a href="/Education/Index" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</div>

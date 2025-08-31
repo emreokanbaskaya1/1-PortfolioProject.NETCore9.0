@@ -1,0 +1,69 @@
+@model List<Experience>
+@{
+    ViewData["Title"] = "Experience Management";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5>Experience Management</h5>
+        <a href="/Experience/Create" class="btn btn-primary">
+            <i class="ti ti-plus"></i> Add Experience
+        </a>
+    </div>
+    <div class="card-body">
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["SuccessMessage"]
+            </div>
+        }
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Company</th>
+                        <th>City</th>
+                        <th>Period</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var experience in Model)
+                    {
+                        <tr>
+                            <td>@experience.Title</td>
+                            <td>@experience.Company</td>
+                            <td>@experience.City</td>
+                            <td>
+                                @experience.StartYear.@experience.StartMonth - 
+                                @(experience.EndYear != null ? $"{experience.EndYear}.{experience.EndMonth}" : "Present")
+                            </td>
+                            <td>@(experience.Description?.Length > 50 ? experience.Description.Substring(0, 50) + "..." : experience.Description)</td>
+                            <td>
+                                <a href="/Experience/Update/@experience.ExperienceId" class="btn btn-sm btn-warning">
+                                    <i class="ti ti-edit"></i>
+                                </a>
+                                <a href="/Experience/Delete/@experience.ExperienceId" class="btn btn-sm btn-danger" 
+                                   onclick="return confirm('Are you sure you want to delete this experience?')">
+                                    <i class="ti ti-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        @if (!Model.Any())
+        {
+            <div class="text-center py-4">
+                <p class="text-muted">No experience records found.</p>
+                <a href="/Experience/Create" class="btn btn-primary">Add First Experience</a>
+            </div>
+        }
+    </div>
+</div>

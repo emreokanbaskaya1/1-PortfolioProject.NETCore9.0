@@ -29,7 +29,7 @@
 
 
   <!-- [ Main Content ] start -->
-  <div class="pc-container">
+  <div class="pc-container" style="padding-top: 70px;">
     <div class="pc-content">
       <!-- [ breadcrumb ] start -->
       <div class="page-header">
@@ -41,7 +41,7 @@
               </div>
               <br />
               <ul class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home Page</a></li>
+                <li class="breadcrumb-item"><a href="/Statistics/Index">Home Page</a></li>
                 <li class="breadcrumb-item"><a href="#">@ViewData["Title"]</a></li>
               </ul>
             </div>
@@ -50,6 +50,15 @@
       </div>
       <!-- [ breadcrumb ] end -->
       <!-- [ Main Content ] start -->
+      
+      @if (TempData["SuccessMessage"] != null)
+      {
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <i class="ti ti-check-circle me-2"></i>
+              @TempData["SuccessMessage"]
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+      }
       
       @RenderBody()
 

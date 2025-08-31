@@ -1,0 +1,42 @@
+@model ContactInfo
+@{
+    ViewData["Title"] = "Contact Information Settings";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h5>Contact Information Settings</h5>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            <div class="form-group mb-3">
+                <label>Address:</label>
+                <textarea class="form-control" asp-for="Address" rows="3" 
+                          placeholder="Your full address..." required></textarea>
+            </div>
+
+            <div class="form-group mb-3">
+                <label>Phone Number:</label>
+                <input type="tel" class="form-control" asp-for="PhoneNumber" 
+                       placeholder="+90 555 123 4567" required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label>Email:</label>
+                <input type="email" class="form-control" asp-for="Email" 
+                       placeholder="john@example.com" required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label>Map URL (Google Maps):</label>
+                <input type="url" class="form-control" asp-for="MapUrl" 
+                       placeholder="https://maps.google.com/..." />
+                <small class="form-text text-muted">Paste your Google Maps location URL here</small>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a href="/Statistics/Index" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</div>

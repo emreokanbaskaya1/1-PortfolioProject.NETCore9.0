@@ -20,6 +20,9 @@ namespace Portfolio.Web.Context
         public DbSet<Testimonial> Testimonials  { get; set; }
         public DbSet<UserMessage> UserMessages   { get; set; }
         public DbSet<ContactInfo> ContactInfo   { get; set; }
+        public DbSet<User> Users   { get; set; }
+
+        public DbSet<SocialMedia> SocialMedias   { get; set; }
 
         //CRUD Create Read Update Delete
     }

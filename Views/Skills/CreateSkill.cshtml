@@ -1,0 +1,21 @@
+﻿@model Skill
+@{
+    ViewData["Title"] = "Create Skill";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+
+<form method="post">
+
+    <div class="form-group">
+        <label>Title</label>
+        <input type="text" class="form-control" asp-for="Title" />
+        <label>Percentage</label>
+        <input type="text" class="form-control" asp-for="Percentage" />
+    </div>
+
+    <button class="btn btn-outline-primary">Save</button>
+</form>
+
+
+
