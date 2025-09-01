@@ -1,13 +1,13 @@
 # Portfolio Web - ASP.NET Core Portfolio Application
 
-## Overview
+## -Overview
 Portfolio Web is a comprehensive ASP.NET Core 9.0 web application designed to showcase developer portfolios.  
 It includes a **public-facing portfolio website** and a **secure admin panel** for content management.  
 This application provides a professional platform for developers to display their work, skills, and experience.
 
 ---
 
-## Features
+## -Features
 
 ### Public Portfolio
 - **Hero Section**: Dynamic banner with customizable content  
@@ -32,7 +32,7 @@ This application provides a professional platform for developers to display thei
 
 ---
 
-## Technology Stack
+## -Technology Stack
 
 ### Backend
 - **Framework**: ASP.NET Core 9.0  
@@ -58,7 +58,7 @@ This application provides a professional platform for developers to display thei
 
 ---
 
-## Database Schema
+## -Database Schema
 
 ### Core Entities
 - **User**: Authentication data  
@@ -78,7 +78,7 @@ This application provides a professional platform for developers to display thei
 
 ---
 
-## 📸 Screenshots  
+## 📸 Screenshots 📸
 
 ### Public Portfolio UI  
 
@@ -169,7 +169,6 @@ This application provides a professional platform for developers to display thei
 
 ---
 
-## 👨‍💻 Author
 **Emre Okan BAŞKAYA**  
 - LinkedIn: [Emre Okan Başkaya](https://www.linkedin.com/in/emre-okan-baskaya/)  
 
