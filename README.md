@@ -1,15 +1,15 @@
-# 🚀 Portfolio Web - ASP.NET Core Portfolio Application
+# Portfolio Web - ASP.NET Core Portfolio Application
 
-## 🌟 Overview
+## Overview
 Portfolio Web is a comprehensive ASP.NET Core 9.0 web application designed to showcase developer portfolios.  
 It includes a **public-facing portfolio website** and a **secure admin panel** for content management.  
 This application provides a professional platform for developers to display their work, skills, and experience.
 
 ---
 
-## ✨ Features
+## Features
 
-### 🌐 Public Portfolio
+### Public Portfolio
 - **Hero Section**: Dynamic banner with customizable content  
 - **About Section**: Personal details and biography  
 - **Resume**: Education and work experience timeline  
@@ -20,7 +20,7 @@ This application provides a professional platform for developers to display thei
 - **Contact Form**: Visitor message submission  
 - **Social Media**: Integrated social media links  
 
-### 🔐 Admin Panel
+### Admin Panel
 - **User Management**: Secure authentication system  
 - **Content Management**: CRUD operations for all sections  
 - **Project Management**: Add, edit, delete portfolio projects  
@@ -32,7 +32,7 @@ This application provides a professional platform for developers to display thei
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Backend
 - **Framework**: ASP.NET Core 9.0  
@@ -58,7 +58,7 @@ This application provides a professional platform for developers to display thei
 
 ---
 
-## 🗄️ Database Schema
+## Database Schema
 
 ### Core Entities
 - **User**: Authentication data  
@@ -80,72 +80,92 @@ This application provides a professional platform for developers to display thei
 
 ## 📸 Screenshots  
 
-### 🌐 Public Portfolio UI  
+### Public Portfolio UI  
 
 1. **Home Page** – Landing page with a dynamic hero section and navigation.  
    <img width="1919" height="993" alt="image" src="https://github.com/user-attachments/assets/3cf32dd1-1afa-4976-b22f-970c461d4eaf" />
   
 
+
 2. **About Page** – Personal details, biography, and contact info.  
-   ![About](./screenshots/ui-about.png)  
+   <img width="1919" height="993" alt="image" src="https://github.com/user-attachments/assets/c0dab5c4-d371-4538-89ba-d661d38d5aab" />
+
 
 3. **Resume** – Timeline view for **Education** and **Professional Experience**.  
-   ![Resume](./screenshots/ui-resume.png)  
+   <img width="1919" height="992" alt="image" src="https://github.com/user-attachments/assets/cedd9ea3-0e89-43ff-a11a-21d600efd690" />
+
 
 4. **Skills & Statistics** – Visual representation of technical skills and career stats.  
-   ![Skills](./screenshots/ui-skills.png)  
+   <img width="1919" height="993" alt="image" src="https://github.com/user-attachments/assets/60fae806-b353-40f5-af34-b1c4c1c00b07" />
+ 
 
 5. **Testimonials** – Client and colleague feedback with ratings.  
-   ![Testimonials](./screenshots/ui-testimonials.png)  
+   <img width="1920" height="993" alt="image" src="https://github.com/user-attachments/assets/c1c7a6e3-f05d-4af0-be8d-eee27d43926c" />
+
 
 6. **Projects** – Portfolio projects categorized and displayed.  
-   ![Projects](./screenshots/ui-projects.png)  
+   <img width="1919" height="988" alt="image" src="https://github.com/user-attachments/assets/8c0cc7d6-1f1d-4ae6-b413-7266b2485f00" />
+  
 
 7. **Contact Page** – Contact form, email, phone number, and location map.  
-   ![Contact](./screenshots/ui-contact.png)  
+   <img width="1919" height="985" alt="image" src="https://github.com/user-attachments/assets/97ccc5e8-469b-4729-b0ff-1fd30361286b" />
+  
 
 ---
 
-### 🔐 Admin Panel  
+### Admin Panel  
 
 1. **Login Page** – Secure authentication for accessing the admin panel.  
-   ![Login](./screenshots/admin-login.png)  
+   <img width="1919" height="993" alt="image" src="https://github.com/user-attachments/assets/c9f938ca-1431-42bc-bb91-21d9f23937a0" />
+  
 
 2. **Dashboard** – Overview with statistics, skills average, unread messages, and reviews.  
-   ![Dashboard](./screenshots/admin-dashboard.png)  
+   <img width="1919" height="993" alt="image" src="https://github.com/user-attachments/assets/8d4ce12f-7a32-4710-a726-3f0756a7f9dd" />
+  
 
 3. **Category Management** – Create, update, or delete project categories.  
-   ![Categories](./screenshots/admin-categories.png)  
+   <img width="1919" height="992" alt="image" src="https://github.com/user-attachments/assets/d180bdfb-3b7b-4001-886f-3830972a590a" />
+  
 
 4. **Project Management** – Manage portfolio projects with CRUD operations.  
-   ![Projects](./screenshots/admin-projects.png)  
+   <img width="1919" height="994" alt="image" src="https://github.com/user-attachments/assets/8b74aaeb-5cc9-426c-856a-9fa93bf61193" />
+  
 
 5. **Skills Management** – Add, update, or delete technical skills with percentages.  
-   ![Skills](./screenshots/admin-skills.png)  
+   <img width="1919" height="993" alt="image" src="https://github.com/user-attachments/assets/5bdd6c76-07ce-4ddc-9d69-1ab28307111d" />
+  
 
 6. **Banner Settings** – Configure homepage banner, name, and title.  
-   ![Banner](./screenshots/admin-banner.png)  
+   <img width="1919" height="993" alt="image" src="https://github.com/user-attachments/assets/773ebb8e-2df7-40e7-8143-6da456c34d6e" />
+  
 
 7. **About Me Settings** – Manage profile image, description, and personal info.  
-   ![About](./screenshots/admin-about.png)  
+   <img width="1913" height="991" alt="image" src="https://github.com/user-attachments/assets/aaf701c2-87f9-45de-9c5b-52097c712a94" />
+  
 
 8. **Education Management** – Add and edit education history with details.  
-   ![Education](./screenshots/admin-education.png)  
+   <img width="1919" height="993" alt="image" src="https://github.com/user-attachments/assets/20af4187-956b-49be-b1bb-5a7d195e4048" />
+  
 
 9. **Experience Management** – Manage professional experiences with CRUD features.  
-   ![Experience](./screenshots/admin-experience.png)  
+   <img width="1919" height="993" alt="image" src="https://github.com/user-attachments/assets/f1b2c1da-2cb3-4ce0-a832-d29eabdae3d6" />
+  
 
 10. **Message Management** – View, read, and delete visitor messages.  
-    ![Messages](./screenshots/admin-messages.png)  
+    <img width="1916" height="992" alt="image" src="https://github.com/user-attachments/assets/b8784629-74ee-42d3-a0b4-af15134b74fa" />
+  
 
 11. **Testimonials Management** – Handle client and colleague feedback.  
-    ![Testimonials](./screenshots/admin-testimonials.png)  
+    <img width="1919" height="991" alt="image" src="https://github.com/user-attachments/assets/f0738c99-7a07-468c-88d3-136eee3f3a10" />
+  
 
 12. **Contact Info Settings** – Update address, email, phone, and Google Maps integration.  
-    ![Contact Info](./screenshots/admin-contact.png)  
+    <img width="1919" height="992" alt="image" src="https://github.com/user-attachments/assets/1c31ca60-5a3f-4584-8af5-55cdc535e701" />
+  
 
 13. **Profile Management** – Edit username, password, and profile details.  
-    ![Profile](./screenshots/admin-profile.png)  
+    <img width="1919" height="993" alt="image" src="https://github.com/user-attachments/assets/1cb77a0d-8f7a-429c-a0bc-360dbf172479" />
+  
 
 ---
 
