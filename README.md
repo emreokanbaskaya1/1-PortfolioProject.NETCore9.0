@@ -1,4 +1,4 @@
-# Portfolio Web - ASP.NET Core Portfolio Application
+# Portfolio Web - ASP.NET Core 9.0 Portfolio Project
 
 ## -Overview
 Portfolio Web is a comprehensive ASP.NET Core 9.0 web application designed to showcase developer portfolios.  
